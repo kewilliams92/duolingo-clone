@@ -112,18 +112,18 @@ const main = async () => {
       {
         id: 2,
         challengeId: 1, // Which one of these is the Spanish for "the dog"?
-        imageSrc: "/cat.svg",
+        imageSrc: "/chicken.svg",
         correct: false,
-        text: "El gato",
-        audioSrc: "/es_cat.mp3",
+        text: "El pollo",
+        audioSrc: "/es_chicken.mp3",
       },
       {
         id: 3,
         challengeId: 1, // Which one of these is the Spanish for "the dog"?
-        imageSrc: "/fish.svg",
+        imageSrc: "/goat.svg",
         correct: false,
-        text: "El pez",
-        audioSrc: "/es_fish.mp3",
+        text: "El cabra",
+        audioSrc: "/es_goat.mp3",
       },
     ]);
 
