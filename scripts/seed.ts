@@ -96,7 +96,21 @@ const main = async () => {
         lessonId: 1, // Nouns
         type: "SELECT",
         order: 1,
-        question: 'Which one of these is the Spanish for "the dog"?',
+        question: 'Which one of these is Spanish for "the dog"?',
+      },
+      {
+        id: 2,
+        lessonId: 1, // Nouns
+        type: "ASSIST",
+        order: 2,
+        question: '"the dog" in Spanish is...',
+      },
+      {
+        id: 3,
+        lessonId: 1, // Nouns
+        type: "SELECT",
+        order: 3,
+        question: 'Which one of these in Spanish is "the chicken"?',
       },
     ]);
 
@@ -120,6 +134,57 @@ const main = async () => {
       {
         id: 3,
         challengeId: 1, // Which one of these is the Spanish for "the dog"?
+        imageSrc: "/goat.svg",
+        correct: false,
+        text: "El cabra",
+        audioSrc: "/es_goat.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        id: 4,
+        challengeId: 2, // "the dog" in Spanish is...
+        correct: true,
+        text: "El perro",
+        audioSrc: "/es_dog.mp3",
+      },
+      {
+        id: 5,
+        challengeId: 2, // "the dog" in Spanish is...
+        correct: false,
+        text: "El pollo",
+        audioSrc: "/es_chicken.mp3",
+      },
+      {
+        id: 6,
+        challengeId: 2, // "the dog" in Spanish is...
+        correct: false,
+        text: "El cabra",
+        audioSrc: "/es_goat.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        id: 7,
+        challengeId: 3, // Which one of these is Spanish for "the chicken"?
+        imageSrc: "/dog.svg",
+        correct: false,
+        text: "El perro",
+        audioSrc: "/es_dog.mp3",
+      },
+      {
+        id: 8,
+        challengeId: 3, // Which one of these is Spanish for "the chicken"?
+        imageSrc: "/chicken.svg",
+        correct: true,
+        text: "El pollo",
+        audioSrc: "/es_chicken.mp3",
+      },
+      {
+        id: 9,
+        challengeId: 3, // Which one of these is Spanish for "the dog"?
         imageSrc: "/goat.svg",
         correct: false,
         text: "El cabra",
