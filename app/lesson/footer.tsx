@@ -8,7 +8,7 @@ type Props = {
   onCheck: () => void;
   status: "correct" | "wrong" | "none" | "completed";
   disabled?: boolean;
-  lessonId?: boolean;
+  lessonId?: number;
 };
 
 export const Footer = ({ onCheck, status, disabled, lessonId }: Props) => {
@@ -39,7 +39,7 @@ export const Footer = ({ onCheck, status, disabled, lessonId }: Props) => {
           <Button
             variant="default"
             size={isMobile ? "sm" : "lg"}
-            onClick={() => (window.location.href = `/learn/${lessonId}`)}
+            onClick={() => (window.location.href = `/lesson/${lessonId}`)}
           >
             Practice again
           </Button>

@@ -116,7 +116,6 @@ const main = async () => {
 
     await db.insert(schema.challengeOptions).values([
       {
-        id: 1,
         challengeId: 1, // Which one of these is the Spanish for "the dog"?
         imageSrc: "/dog.svg",
         correct: true,
@@ -124,7 +123,6 @@ const main = async () => {
         audioSrc: "/es_dog.mp3",
       },
       {
-        id: 2,
         challengeId: 1, // Which one of these is the Spanish for "the dog"?
         imageSrc: "/chicken.svg",
         correct: false,
@@ -132,7 +130,6 @@ const main = async () => {
         audioSrc: "/es_chicken.mp3",
       },
       {
-        id: 3,
         challengeId: 1, // Which one of these is the Spanish for "the dog"?
         imageSrc: "/goat.svg",
         correct: false,
@@ -143,21 +140,18 @@ const main = async () => {
 
     await db.insert(schema.challengeOptions).values([
       {
-        id: 4,
         challengeId: 2, // "the dog" in Spanish is...
         correct: true,
         text: "El perro",
         audioSrc: "/es_dog.mp3",
       },
       {
-        id: 5,
         challengeId: 2, // "the dog" in Spanish is...
         correct: false,
         text: "El pollo",
         audioSrc: "/es_chicken.mp3",
       },
       {
-        id: 6,
         challengeId: 2, // "the dog" in Spanish is...
         correct: false,
         text: "El cabra",
@@ -167,7 +161,6 @@ const main = async () => {
 
     await db.insert(schema.challengeOptions).values([
       {
-        id: 7,
         challengeId: 3, // Which one of these is Spanish for "the chicken"?
         imageSrc: "/dog.svg",
         correct: false,
@@ -175,7 +168,6 @@ const main = async () => {
         audioSrc: "/es_dog.mp3",
       },
       {
-        id: 8,
         challengeId: 3, // Which one of these is Spanish for "the chicken"?
         imageSrc: "/chicken.svg",
         correct: true,
@@ -183,12 +175,35 @@ const main = async () => {
         audioSrc: "/es_chicken.mp3",
       },
       {
-        id: 9,
         challengeId: 3, // Which one of these is Spanish for "the dog"?
         imageSrc: "/goat.svg",
         correct: false,
         text: "El cabra",
         audioSrc: "/es_goat.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challenges).values([
+      {
+        id: 4,
+        lessonId: 2, // Verbs
+        type: "SELECT",
+        order: 1,
+        question: 'Which one of these is Spanish for "the dog"?',
+      },
+      {
+        id: 5,
+        lessonId: 2, // Verbs
+        type: "ASSIST",
+        order: 2,
+        question: '"the dog" in Spanish is...',
+      },
+      {
+        id: 6,
+        lessonId: 2, // Verbs
+        type: "SELECT",
+        order: 3,
+        question: 'Which one of these in Spanish is "the chicken"?',
       },
     ]);
 
